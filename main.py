@@ -1,7 +1,8 @@
 import sys
 import string
+import threading
 import random
-from time import time, thread_time, process_time, clock
+from time import time, thread_time, process_time, clock_gettime, pthread_getcpuclockid
 
 """
     Функция для печати матрицы
@@ -228,12 +229,13 @@ def random_string(str_len):
     return ''.join(random.choice(letters) for i in range(str_len))
 
 def time_analysis(func, count = 100, str_len = 8):
-    start = clock()
+    clk_id = pthread_getcpuclockid(threading.get_ident())
+    start = clock_gettime(clk_id)
     for i in range(count):
         str1 = random_string(str_len)
         str2 = random_string(str_len)
         func(str1, str2, False)
-    end = clock()
+    end = clock_gettime(clk_id)
     print(end, start)
     return (end - start) / count
 
@@ -281,4 +283,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
