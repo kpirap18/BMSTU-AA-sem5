@@ -1,0 +1,239 @@
+\chapter{Технологическая часть}
+
+В данном разделе будут приведены требования к программному обеспечению, средства реализации и листинги кода.
+
+\section{Требования к ПО}
+
+К программе предъявляется ряд требований.
+\begin{itemize}
+	\item Входными данными являются две матрицы A и B. Количество столбцов матрицы A долджно быть равно количеству строк матрицы B.
+	\item На выходе получается результат умножения, введенных пользователем, матриц.
+
+\end{itemize}
+
+
+\section{Средства реализации}
+
+В качестве языка программирования для реализации данной лабораторной работы был выбран ЯП Python \cite{pythonlang}. 
+
+Данный язык достаточно удобен и гибок в использовании. 
+
+Время работы алгоритмов было замерено с помощью функции process\_time() из библиотеки time \cite{pythonlangtime}
+
+\section{Сведения о модулях программы}
+Программа состоит из двух модулей:
+\begin{enumerate}
+	\item main.py - главный файл программы, в котором располагаются коды всех алгоритмов и меню;
+	\item test.py - файл с замерами времени для графического изображения результата;
+\end{enumerate}
+
+
+\section{Листинг кода}
+
+В листинге \ref{lst:standart} приведена реализация алгоритма стандартного алгоритма матриц.
+
+В листингах \ref{lst:vinograd}, \ref{lst:vinograd_opt} приведена реализация алгоритма Копперсмита-Винограда.
+
+
+\begin{lstlisting}[label=lst:standart,caption=Реализация стандарного умножения матриц]
+def simple_matrix_mult(matrix1, matrix2):
+	if (len(matrix1) != len(matrix2[0])):
+		print("Error size matrix!")
+		return -1
+	
+	n = len(matrix1)
+	m = len(matrix1[0])
+	q = len(matrix2[0])
+	
+	matrix_res = [[0] * q for i in range(n)]
+	
+	for i in range(n):
+		for j in range(q):
+			for k in range(m):
+				matrix_res[i][j] = matrix_res[i][j] + \
+					matrix1[i][k] * matrix2[k][j]
+				
+	return matrix_res
+	
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:vinograd,caption=Реализация алгоритма Копперсмита-Винограда]
+def winograd_matrix_mult(matrix1, matrix2):
+	if (len(matrix2) != len(matrix1[0])):
+		print("Error size matrix!")
+		return -1
+	
+	n = len(matrix1)
+	m = len(matrix1[0])
+	q = len(matrix2[0])
+	
+	matrix_res = [[0] * q for i in range(n)]
+	
+	row_factor = [0] * n
+	for i in range(n):
+		for j in range(0, m // 2, 1):
+			row_factor[i] = row_factor[i] + \
+				matrix1[i][2 * j] * matrix1[i][2 * j + 1]
+	
+	column_factor = [0] * q
+	for i in range(q):
+		for j in range(0, m // 2, 1):
+			column_factor[i] = column_factor[i] + \
+				matrix2[2 * j][i] * matrix2[2 * j + 1][i]
+	
+	for i in range(n):
+		for j in range(q):
+			matrix_res[i][j] = -row_factor[i] - column_factor[j]
+			for k in range(0, m // 2, 1):
+				matrix_res[i][j] = matrix_res[i][j] +\
+					(matrix1[i][2 * k + 1] + matrix2[2 * k][j]) * \
+					(matrix1[i][2 * k] + matrix2[2 * k + 1][j])
+	
+	if m % 2 == 1:
+		for i in range(n):
+			for j in range(q):
+				matrix_res[i][j] = matrix_res[i][j] +\
+					matrix1[i][m - 1] * matrix2[m - 1][j]
+	
+	return matrix_res
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:vinograd_opt,caption=Реализация алгоритма Копперсмита-Винограда (оптимизированный)]
+def winograd_matrix_mult_opim(matrix1, matrix2):
+	if (len(matrix2) != len(matrix1[0])):
+		print("Error size matrix!")
+		return -1
+	
+	n = len(matrix1)
+	m = len(matrix1[0])
+	q = len(matrix2[0])
+	
+	matrix_res = [[0] * q for i in range(n)]
+	
+	row_factor = [0] * n
+	for i in range(n):
+		for j in range(1, m, 2):
+			row_factor[i] += matrix1[i][j] * matrix1[i][j - 1]
+	
+	column_factor = [0] * q
+	for i in range(q):
+		for j in range(1, m, 2):
+			column_factor[i] += matrix2[j][i] * matrix2[j - 1][i]
+	
+	flag = n % 2
+	for i in range(n):
+		for j in range(q):
+			matrix_res[i][j] = -(row_factor[i] + column_factor[j])
+			for k in range(1, m, 2):
+				matrix_res[i][j] += (matrix1[i][k - 1] + matrix2[k][j]) * \
+						(matrix1[i][k] + matrix2[k - 1][j])
+				if (flag):
+					matrix_res[i][j] += matrix1[i][m - 1] \
+						* matrix2[m - 1][j]
+	
+	return matrix_res
+\end{lstlisting}
+
+
+\section{Функциональные тесты}
+
+В таблице~\ref{tabular:test_rec} приведены тесты для функций, реализующих стандартный алгоритм умножения матриц, алгоритм Винограда и оптимизированный алгоритм Винограда. Тесты пройдены успешно.
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}}
+			\hline
+			Матрица 1 & Матрица 2 &Ожидаемый результат \\ 
+			\hline
+			\vspace{4mm}
+			$\begin{pmatrix}
+				1 & 1 & 1\\
+				5 & 5 & 5\\
+				2 & 2 & 2
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				1 \\
+				1 \\
+				1 
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				3 \\
+				15 \\
+				6
+			\end{pmatrix}$ \\
+			\vspace{2mm}
+			\vspace{2mm}
+			$\begin{pmatrix}
+				1 & 1 & 1
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				1 \\
+				1 \\
+				1
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				1 & 1 & 1\\
+				1 & 1 & 1 \\
+				1 & 1 & 1
+			\end{pmatrix}$ \\
+			\vspace{2mm}
+			\vspace{2mm}
+			$\begin{pmatrix}
+				1 & 1 \\
+				1 & 1
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				1 & 1\\
+				1 & 1
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				2 & 2\\
+				2 & 2
+			\end{pmatrix}$ \\
+			\vspace{2mm}
+			\vspace{2mm}
+			$\begin{pmatrix}
+				2
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				2
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				4
+			\end{pmatrix}$ \\
+			\vspace{2mm}
+			\vspace{2mm}
+			$\begin{pmatrix}
+				1 & -2 & 3\\
+				1 & 2 & 3\\
+				1 & 2 & 3
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				-1 & 2 & 3\\
+				1 & 2 & 3\\
+				1 & 2 & 3
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				0 & 4 & 6\\
+				4 & 12 & 18\\
+				4 & 12 & 18
+			\end{pmatrix}$\\
+			\vspace{2mm}
+			\vspace{2mm}
+			$\begin{pmatrix}
+				1 & 2
+			\end{pmatrix}$ &
+			$\begin{pmatrix}
+				1 & 2
+			\end{pmatrix}$ &
+			Не верный размер\\
+		\end{tabular}
+	\end{center}
+	\caption{\label{tabular:test_rec} Тестирование функций}
+\end{table}
+
+
+\section*{Вывод}
+
+В этом разделе была представлена реализация алгоритмов классического умножения матриц, алгоритма Винограда, оптимизирвоанного алгоритма Винограда. Тестирование показало, что алгоритмы реализованы
+правильно и работают корректно.
