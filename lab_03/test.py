@@ -77,7 +77,7 @@ def measure_time(get_array, n1, n2, st, it):
 
 
 def time_all():
-    nu = [100, 200, 300, 400, 500, 1000, 2000, 5000]
+    nu = [100, 200, 300, 400, 500, 600, 1000, 2000, 2500]
     t_bubble = []
     t_insert = []
     t_select = []
@@ -88,21 +88,21 @@ def time_all():
         t = 0
 
         for i in range(it):
-            arr = get_random_array(n)
+            arr = get_worst_array(n)
             t += get_calc_time(shaker_sort, arr)
 
         t_bubble.append(t / it)
         t = 0
 
         for i in range(it):
-            arr = get_random_array(n)
+            arr = get_worst_array(n)
             t += get_calc_time(insertion_sort, arr)
 
         t_insert.append(t / it)
         t = 0
 
         for i in range(it):
-            arr = get_random_array(n)
+            arr = get_worst_array(n)
             t += get_calc_time(selection_sort, arr)
 
         t_select.append(t / it)
@@ -122,8 +122,8 @@ time_all()
 # result1 = measure_time(get_best_array, n1, n2 + 1, h, 100)
 # result2 = measure_time(get_worst_array, n1, n2 + 1, h, 100)
 # result3 = measure_time(get_random_array, n1, n2 + 1, h, 100)
-#
-#
+
+
 # fig1 = plt.figure(figsize=(10, 7))
 # plot = fig1.add_subplot()
 # plot.plot(len_arr, result1[0], label = "Сортировка Шейкер")
@@ -134,7 +134,8 @@ time_all()
 # plt.title("Временные характеристики алгоритмов вычисления расстояния")
 # plt.ylabel("Затраченное время (мск)")
 # plt.xlabel("Длина")
-#
+# print("res1 отсортированные данные", result1)
+
 # fig2 = plt.figure(figsize=(10, 7))
 # plot = fig2.add_subplot()
 # plot.plot(len_arr, result2[0], label = "Сортировка Шейкер")
@@ -145,7 +146,8 @@ time_all()
 # plt.title("Временные характеристики алгоритмов вычисления расстояния")
 # plt.ylabel("Затраченное время (мск)")
 # plt.xlabel("Длина")
-#
+# print("res2 обратные порядок", result2)
+
 # fig3 = plt.figure(figsize=(10, 7))
 # plot = fig3.add_subplot()
 # plot.plot(len_arr, result3[0], label = "Сортировка Шейкер")
@@ -156,5 +158,6 @@ time_all()
 # plt.title("Временные характеристики алгоритмов вычисления расстояния")
 # plt.ylabel("Затраченное время (мск)")
 # plt.xlabel("Длина")
-#
+# print("res3 слйчайный порядок", result3)
+
 # plt.show()
