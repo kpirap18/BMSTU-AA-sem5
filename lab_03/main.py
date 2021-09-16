@@ -27,7 +27,7 @@ def shaker_sort(arr):
             break
 
         swapped = False
-        end_index = end_index - 1
+        end_index -= 1
 
         # проход справа налево
         for i in range(end_index - 1, start_index - 1, -1):

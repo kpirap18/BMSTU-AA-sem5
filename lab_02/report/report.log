@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  14 SEP 2021 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  16 SEP 2021 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,45 +1386,50 @@ Overfull \hbox (102.2585pt too wide) in paragraph at lines 13--13
  [] 
  []
 
-<inc/img/vinograd1.png, id=199, 620.3175pt x 545.78906pt>
+[7
+
+
+
+
+ <./inc/img/standart.png>]
+<inc/img/vinograd1.png, id=208, 620.3175pt x 545.78906pt>
 File: inc/img/vinograd1.png Graphic file (type png)
 <use inc/img/vinograd1.png>
-Package pdftex.def Info: inc/img/vinograd1.png  used on input line 14.
+Package pdftex.def Info: inc/img/vinograd1.png  used on input line 15.
 (pdftex.def)             Requested size: 485.06673pt x 426.79134pt.
 
-Overfull \hbox (15.59624pt too wide) in paragraph at lines 14--14
+Overfull \hbox (15.59624pt too wide) in paragraph at lines 15--15
  [] 
  []
 
+[8
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<inc/img/vinograd2.png, id=200, 611.28375pt x 515.67656pt>
+ <./inc/img/vinograd1.png>]
+<inc/img/vinograd2.png, id=214, 611.28375pt x 515.67656pt>
 File: inc/img/vinograd2.png Graphic file (type png)
 <use inc/img/vinograd2.png>
-Package pdftex.def Info: inc/img/vinograd2.png  used on input line 15.
+Package pdftex.def Info: inc/img/vinograd2.png  used on input line 17.
 (pdftex.def)             Requested size: 505.92896pt x 426.79134pt.
 
-Overfull \hbox (36.45847pt too wide) in paragraph at lines 15--15
+Overfull \hbox (36.45847pt too wide) in paragraph at lines 17--17
  [] 
  []
 
+[9
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ <./inc/img/vinograd2.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+31.
 
-) [7
+(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)) [10
 
-
-
-
- <./inc/img/standart.png>] [8 <./inc/img/vinograd1.png>]
-Overfull \vbox (104.17548pt too high) has occurred while \output is active []
-
-
-[9 <./inc/img/vinograd2.png>]
+] [11]
 \openout2 = `30-impl.aux'.
 
- (./30-impl.tex
+
+(./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
 
 Overfull \hbox (32.13043pt too wide) in paragraph at lines 21--22
@@ -1432,7 +1437,7 @@ Overfull \hbox (32.13043pt too wide) in paragraph at lines 21--22
 функ-ции process_time()
  []
 
-[10
+[12
 
 
 
@@ -1448,21 +1453,60 @@ LaTeX Font Info:    Trying to load font information for TS1+cmss on input line
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [11] [12]
+) [13] [14]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [13] [14]
+) [15] [16]
 \openout2 = `40-research.aux'.
 
  (./40-research.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-) [15
+<inc/img/example.png, id=374, 476.53032pt x 560.0925pt>
+File: inc/img/example.png Graphic file (type png)
+<use inc/img/example.png>
+Package pdftex.def Info: inc/img/example.png  used on input line 21.
+(pdftex.def)             Requested size: 338.9206pt x 398.33858pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `tbl:time1' on page 17 undefined on input line 25.
+
+
+LaTeX Warning: Reference `tbl:time2' on page 17 undefined on input line 25.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<inc/img/1.png, id=377, 752.8125pt x 526.96875pt>
+File: inc/img/1.png Graphic file (type png)
+<use inc/img/1.png>
+Package pdftex.def Info: inc/img/1.png  used on input line 57.
+(pdftex.def)             Requested size: 406.48972pt x 284.52756pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<inc/img/2.png, id=378, 752.8125pt x 526.96875pt>
+File: inc/img/2.png Graphic file (type png)
+<use inc/img/2.png>
+Package pdftex.def Info: inc/img/2.png  used on input line 84.
+(pdftex.def)             Requested size: 406.48972pt x 284.52756pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17
 
 
 
 
-] [16]
+] [18 <./inc/img/example.png>] [19 <./inc/img/1.png>] [20 <./inc/img/2.png>]) [
+21
+
+]
 \openout2 = `50-conclusion.aux'.
 
  (./50-conclusion.tex
@@ -1471,7 +1515,7 @@ Overfull \hbox (5.37364pt too wide) in paragraph at lines 7--8
 рсмита-
  []
 
-) [17
+) [22
 
 
 
@@ -1480,54 +1524,30 @@ Overfull \hbox (5.37364pt too wide) in paragraph at lines 7--8
 \openout2 = `51-biblio.aux'.
 
  (./51-biblio.tex (./report.bbl
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-14.
-
-(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
-\T2A/cmtt/m/n/14.4 / / ru . wikipedia . org / wiki / \T2A \ CYRM \ T2A \ cyra \
- T2A \ cyrt \ T2A \ cyrr \
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
-\T2A/cmtt/m/n/14.4 T2A \ cyri \ T2A \ cyrc \ T2A \ cyra _ (\T2A \ cyrm \ T2A \ 
-cyra \ T2A \ cyrt \ T2A \
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
-\T2A/cmtt/m/n/14.4 cyre \ T2A \ cyrm \ T2A \ cyra \ T2A \ cyrt \ T2A \ cyri \ T
-2A \ cyrk \ T2A \ cyra)$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 []\T2A/cmr/m/n/14.4 ѕроцессор Intel\TS1/cmr/m/n/14.4 Ѓ \T2A/cmr/m/n/14.4 Core\T
 S1/cmr/m/n/14.4 Ч \T2A/cmr/m/n/14.4 i5-1135G7 [Ёлек-трон-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 \T2A/cmr/m/n/14.4 ный ре-сурс].  –е-жим до-сту-па: []$\T2A/cmtt/m/n/14.4 https 
 : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 \T2A/cmtt/m/n/14.4 intel . ru / content / www / ru / ru / products / sku / 2086
 58 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 \T2A/cmtt/m/n/14.4 intel-[]core-[]i51135g7-[]processor-[]8m-[]cache-[]up-[]to-[
 ]4-[]20-[]ghz /
  []
 
-)) [18
+)) [23
 
 
 
@@ -1535,15 +1555,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--64
 ] (./report.aux (./00-title.aux) (./01-contents.aux) (./02-intro.aux)
 (./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
 (./50-conclusion.aux) (./51-biblio.aux))
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 9592010741647FA3F975583FD4444608;5782.
+(rerunfilecheck)             Checksum: 82A67D11C25DF79C3AF0AECCE885ACD9;5784.
  ) 
 Here is how much of TeX's memory you used:
- 38000 strings out of 478893
- 869733 string characters out of 5867671
- 1394168 words of memory out of 5000000
- 54941 multiletter control sequences out of 15000+600000
- 421460 words of font info for 62 fonts, out of 8000000 for 9000
+ 38064 strings out of 478893
+ 870680 string characters out of 5867671
+ 1395043 words of memory out of 5000000
+ 54982 multiletter control sequences out of 15000+600000
+ 423063 words of font info for 64 fonts, out of 8000000 for 9000
  1038 hyphenation exceptions out of 8191
  106i,16n,102p,1091b,1900s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/tex
@@ -1558,15 +1581,16 @@ ts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-
 dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsi120
-0.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/
-texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/20
-21/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (18 pages, 405557 bytes).
+lic/cm-super/sfrm1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm144
+0.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb><c:/
+texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/20
+21/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-d
+ist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on report.pdf (23 pages, 532113 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 161 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 536 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
