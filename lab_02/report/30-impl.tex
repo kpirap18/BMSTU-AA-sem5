@@ -21,10 +21,10 @@
 Время работы алгоритмов было замерено с помощью функции process\_time() из библиотеки time \cite{pythonlangtime}
 
 \section{Сведения о модулях программы}
-Программа состоит из двух модулей:
+Программа состоит из двух модулей.
 \begin{enumerate}
-	\item main.py - главный файл программы, в котором располагаются коды всех алгоритмов и меню;
-	\item test.py - файл с замерами времени для графического изображения результата;
+	\item main.py - главный файл программы, в котором располагаются коды всех алгоритмов и меню.
+	\item test.py - файл с замерами времени для графического изображения результата.
 \end{enumerate}
 
 
@@ -127,10 +127,10 @@ def winograd_matrix_mult_opim(matrix1, matrix2):
 			for k in range(1, m, 2):
 				matrix_res[i][j] += (matrix1[i][k - 1] + matrix2[k][j]) * \
 						(matrix1[i][k] + matrix2[k - 1][j])
-				if (flag):
-					matrix_res[i][j] += matrix1[i][m - 1] \
-						* matrix2[m - 1][j]
-	
+			if (flag):
+				matrix_res[i][j] += matrix1[i][m - 1] \
+					* matrix2[m - 1][j]
+
 	return matrix_res
 \end{lstlisting}
 
@@ -139,7 +139,10 @@ def winograd_matrix_mult_opim(matrix1, matrix2):
 
 В таблице~\ref{tabular:test_rec} приведены тесты для функций, реализующих стандартный алгоритм умножения матриц, алгоритм Винограда и оптимизированный алгоритм Винограда. Тесты пройдены успешно.
 
+\clearpage
+
 \begin{table}[h!]
+	\caption{\label{tabular:test_rec} Тестирование функций}
 	\begin{center}
 		\begin{tabular}{c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{\hspace{7mm}}}
 			\hline
@@ -226,10 +229,10 @@ def winograd_matrix_mult_opim(matrix1, matrix2):
 			$\begin{pmatrix}
 				1 & 2
 			\end{pmatrix}$ &
-			Не верный размер\\
+			Неверный размер\\
 		\end{tabular}
 	\end{center}
-	\caption{\label{tabular:test_rec} Тестирование функций}
+	
 \end{table}
 
 

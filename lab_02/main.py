@@ -31,7 +31,7 @@ def simple_matrix_mult(matrix1, matrix2):
     for i in range(n):
         for j in range(q):
             for k in range(m):
-                matrix_res[i][j] = matrix_res[i][j] + \
+                matrix_res[i][j] = matrix_res[i][j] +\
                                    matrix1[i][k] * matrix2[k][j]
 
     return matrix_res
@@ -105,9 +105,9 @@ def winograd_matrix_mult_opim(matrix1, matrix2):
             for k in range(1, m, 2):
                 matrix_res[i][j] += (matrix1[i][k - 1] + matrix2[k][j]) * \
                                     (matrix1[i][k] + matrix2[k - 1][j])
-                if (flag):
-                    matrix_res[i][j] += matrix1[i][m - 1] \
-                                        * matrix2[m - 1][j]
+            if (flag):
+                matrix_res[i][j] += matrix1[i][m - 1] \
+                                    * matrix2[m - 1][j]
 
     return matrix_res
 
