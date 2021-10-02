@@ -1,0 +1,120 @@
+\chapter{Технологическая часть}
+В данном разделе будут приведены требования к программному обеспечению, средства реализации и листинги кода.
+
+\section{Выбор языка программирования}
+
+В данной лабораторной работе использовался язык программирования - С\# \cite{csharplang}.
+
+Данный язык является нативным.
+
+В качестве среды разработки выбор сделан в сторону Visual Studio 2019 \cite{wind}. 
+
+\section{Сведения о модулях программы}
+Программа состоит из двух модулей:
+\begin{enumerate}
+	\item Program.cs - главный файл программы, в котором содержится точка входа в программу.
+	\item Sort.cs - файл с реализацией алгоритма сортировки в двух варинатах (обычный и многопоточный).
+\end{enumerate}
+
+\section{Листинг кода}
+В листингах \ref{lst:simple}, \ref{lst:mnog} представлены реализации алгоритма ранговой сортировки многопоточной и обычной.
+
+Также на листинге \ref{lst:dop} представлен вариант реализации многопоточной программы для ранговой сортировки для замеров на больших массивов при 4 потоках.
+
+\begin{lstlisting}[label=lst:simple,caption=Алгоритм ранговой сортировки (обычный)]
+public static string Sequential(ref int[] a)
+{
+	int n = a.Length;
+	int[] b = new int[n];
+	int x;
+
+	for (int i = 0; i < n; i++)
+	{
+		x = 0;
+		for (int j = 0; j < n; j++)
+			if (a[i] > a[j] || (a[i] == a[j] && j > i))
+				x++;
+		b[x] = a[i]; 
+	}
+	return str;
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}[label=lst:mnog,caption=Алгоритм ранговой сортировки (многопоточный)]
+public static string Parallel(int[] a)
+{
+	int M = 4;
+	Thread[] thrs = new Thread[M];
+	int n = a.Length;
+
+	for (int i = 0; i < M; i++)
+	{
+		int thr = i;
+		thrs[i] = new Thread(() =>
+		{
+			for (int j = thr; j < n; j += M)
+			{
+				int x = 0;
+				for (int k = 0; k < n; k++)
+					if (a[j] > a[k] || (a[j] == a[k] && k > j))
+						x++;
+				b[x] = a[j];
+			}
+		});
+		thrs[i].Start();
+	}
+	for (int i = 0; i < M; i++) 
+		thrs[i].Join();
+	return str;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[label=lst:dop,caption=Алгоритм ранговой сортировки (обычный)]
+public static int[] SortParall(this int[] a)
+{
+	int n = a.Length;
+	int[] b = new int[n];
+	Parallel.ForEach(Partitioner.Create(0, n), range =>
+	{
+		int x;
+		for (int i = range.Item1; i < range.Item2; i++)
+		{
+			x = 0;
+			
+			for (int j = 0; j < n; j++)
+				if (a[i] > a[j] || (a[i] == a[j] && j > i))
+					x++;
+			b[x] = a[i]; 
+		}
+	});
+	return b;
+}
+\end{lstlisting}
+
+\section{Тестирование}
+
+В таблице \ref{tbl:functional_test} приведены тесты для функций, реализующих алгоритмы сортировки. Тесты пройдены успешно.
+
+
+\begin{table}[h]
+	\begin{center}
+		\caption{\label{tbl:functional_test} Функциональные тесты}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Входной массив & Ожидаемый результат & Результат \\ 
+			\hline
+			$[1,2,3,4]$ & $[1,2,3,4]$  & $[1,2,3,4]$\\
+			$[5,4,3,2,1]$  & $[1,2,3,4,5]$ & $[1,2,3,4,5]$\\
+			$[3,2,-5,0,1]$  & $[-5,0,0,2,3]$  & $[-5,0,0,2,3]$\\
+			$[4]$  & $[4]$  & $[4]$\\
+			$[]$  & $[]$  & $[]$\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+\section*{Вывод}
+В данном разделе были разобраны листинги  показывающие
+работу как однопоточного, так и многопоточного алгоритма ранговой сортировки.

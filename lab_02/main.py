@@ -18,7 +18,7 @@ def read_matrix():
 
 
 def simple_matrix_mult(matrix1, matrix2):
-    if (len(matrix1) != len(matrix2[0])):
+    if (len(matrix1[0]) != len(matrix2)):
         print("Error size matrix!")
         return -1
 
@@ -38,7 +38,7 @@ def simple_matrix_mult(matrix1, matrix2):
 
 
 def winograd_matrix_mult(matrix1, matrix2):
-    if (len(matrix2) != len(matrix1[0])):
+    if (len(matrix1[0]) != len(matrix2)):
         print("Error size matrix!")
         return -1
 
@@ -78,7 +78,7 @@ def winograd_matrix_mult(matrix1, matrix2):
 
 
 def winograd_matrix_mult_opim(matrix1, matrix2):
-    if (len(matrix2) != len(matrix1[0])):
+    if (len(matrix1[0]) != len(matrix2)):
         print("Error size matrix!")
         return -1
 
@@ -98,7 +98,7 @@ def winograd_matrix_mult_opim(matrix1, matrix2):
         for j in range(1, m, 2):
             column_factor[i] += matrix2[j][i] * matrix2[j - 1][i]
 
-    flag = n % 2
+    flag = m % 2
     for i in range(n):
         for j in range(q):
             matrix_res[i][j] = -(row_factor[i] + column_factor[j])
