@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  1 OCT 2021 17:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  12 OCT 2021 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<inc/img/b_logo.jpg, id=72, 57.816pt x 65.3715pt>
+<inc/img/b_logo.jpg, id=80, 57.816pt x 65.3715pt>
 File: inc/img/b_logo.jpg Graphic file (type jpg)
 <use inc/img/b_logo.jpg>
 Package pdftex.def Info: inc/img/b_logo.jpg  used on input line 6.
@@ -1350,66 +1350,103 @@ o.jpg>])
 
 
 ]
-Overfull \hbox (0.55957pt too wide) in paragraph at lines 34--35
-[]\T2A/cmr/m/n/14.4 ќднако несмот-р€ на ко-ли-че-ство недо-стат-ков, пе-ре-чис-
-лен-ных вы-ше, мно-
- []
-
-[4]
-Overfull \hbox (16.96227pt too wide) in paragraph at lines 48--49
+Overfull \hbox (16.96227pt too wide) in paragraph at lines 46--47
 \T2A/cmr/m/n/14.4 нен-ной ла-бо-ра-тор-ной ра-бо-те, вы-пол-нен-но-го как расчЉ
 тно-по€снительна€
  []
 
-) [5]
+) [4]
 \openout2 = `10-analysis.aux'.
 
  (./10-analysis.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
-[6
+[5
 
 
 
 
-] [7]
-<inc/img/prim.png, id=154, 311.66437pt x 318.43968pt>
+] [6]
+<inc/img/prim.png, id=160, 311.66437pt x 318.43968pt>
 File: inc/img/prim.png Graphic file (type png)
 <use inc/img/prim.png>
 Package pdftex.def Info: inc/img/prim.png  used on input line 47.
 (pdftex.def)             Requested size: 278.4742pt x 284.52756pt.
-) [8
+) [7
 
  <./inc/img/prim.png>]
 \openout2 = `20-design.aux'.
 
  (./20-design.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-<inc/img/rang.png, id=162, 446.41782pt x 673.01437pt>
+<inc/img/rang.png, id=169, 446.41782pt x 673.01437pt>
 File: inc/img/rang.png Graphic file (type png)
 <use inc/img/rang.png>
-Package pdftex.def Info: inc/img/rang.png  used on input line 8.
+Package pdftex.def Info: inc/img/rang.png  used on input line 9.
 (pdftex.def)             Requested size: 339.71701pt x 512.1496pt.
-) [9
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8
 
 
 
 
- <./inc/img/rang.png>] [10]
+] [9 <./inc/img/rang.png>]
+Overfull \hbox (3.65834pt too wide) in paragraph at lines 13--13
+ |[]\T2A/cmr/bx/n/17.28 ѕараллельна€ ре-а-ли-за-ци€ ал-го-рим-та ранг-воой
+ []
+
+
+Overfull \hbox (4.92305pt too wide) in paragraph at lines 23--24
+[]\T2A/cmr/m/n/14.4 Ќа ри-сун-ке []2.2[] пред-став-ле-на схе-ма ал-го-рит-ма ра
+н-го-вой сор-ти-ров-ки (мно-
+ []
+
+<inc/img/rangOpt.png, id=183, 557.08125pt x 495.35063pt>
+File: inc/img/rangOpt.png Graphic file (type png)
+<use inc/img/rangOpt.png>
+Package pdftex.def Info: inc/img/rangOpt.png  used on input line 25.
+(pdftex.def)             Requested size: 479.98158pt x 426.79134pt.
+
+Overfull \hbox (10.5111pt too wide) in paragraph at lines 25--25
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10
+
+] [11 <./inc/img/rangOpt.png>]
+<inc/img/potok.png, id=195, 401.24907pt x 563.10374pt>
+File: inc/img/potok.png Graphic file (type png)
+<use inc/img/potok.png>
+Package pdftex.def Info: inc/img/potok.png  used on input line 31.
+(pdftex.def)             Requested size: 364.96577pt x 512.1496pt.
+ [12
+
+ <./inc/img/potok.png>]) [13
+
+]
 \openout2 = `30-impl.aux'.
 
- (./30-impl.tex
+
+(./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
+[14
+
+
+
+
+]
 LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
-24.
-(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+27.
+ (c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) [11
+) [15] [16])
+[17
 
-
-
-
-] [12]) [13]
-[14]
+]
 \openout2 = `40-research.aux'.
 
  (./40-research.tex
@@ -1420,48 +1457,53 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15
+[18
 
 
 
 
-] [16]
-<inc/img/f1.png, id=292, 462.528pt x 346.896pt>
-File: inc/img/f1.png Graphic file (type png)
-<use inc/img/f1.png>
-Package pdftex.def Info: inc/img/f1.png  used on input line 56.
+] [19]
+<inc/img/f111.png, id=330, 462.528pt x 346.896pt>
+File: inc/img/f111.png Graphic file (type png)
+<use inc/img/f111.png>
+Package pdftex.def Info: inc/img/f111.png  used on input line 56.
 (pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
-<inc/img/f2.png, id=293, 462.528pt x 346.896pt>
-File: inc/img/f2.png Graphic file (type png)
-<use inc/img/f2.png>
-Package pdftex.def Info: inc/img/f2.png  used on input line 58.
+<inc/img/f222.png, id=331, 462.528pt x 346.896pt>
+File: inc/img/f222.png Graphic file (type png)
+<use inc/img/f222.png>
+Package pdftex.def Info: inc/img/f222.png  used on input line 58.
 (pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
-<inc/img/f3.png, id=294, 462.528pt x 346.896pt>
-File: inc/img/f3.png Graphic file (type png)
-<use inc/img/f3.png>
-Package pdftex.def Info: inc/img/f3.png  used on input line 60.
+<inc/img/f333.png, id=332, 462.528pt x 346.896pt>
+File: inc/img/f333.png Graphic file (type png)
+<use inc/img/f333.png>
+Package pdftex.def Info: inc/img/f333.png  used on input line 60.
 (pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inc/img/f4.png, id=295, 722.7pt x 505.89pt>
+<inc/img/f4.png, id=333, 722.7pt x 505.89pt>
 File: inc/img/f4.png Graphic file (type png)
 <use inc/img/f4.png>
 Package pdftex.def Info: inc/img/f4.png  used on input line 62.
-(pdftex.def)             Requested size: 406.47363pt x 284.52756pt.
+(pdftex.def)             Requested size: 487.76836pt x 341.43306pt.
+
+Overfull \hbox (18.29787pt too wide) in paragraph at lines 62--62
+ [] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17
+[20
 
- <./inc/img/f1.png> <./inc/img/f2.png>] [18 <./inc/img/f3.png> <./inc/img/f4.pn
-g>]) [19
+ <./inc/img/f111.png> <./inc/img/f222.png>] [21 <./inc/img/f333.png> <./inc/img
+/f4.png>]) [22
 
 ]
 \openout2 = `50-conclusion.aux'.
 
- (./50-conclusion.tex) [20
+ (./50-conclusion.tex) [23
 
 
 
@@ -1494,36 +1536,60 @@ Underfull \hbox (badness 2368) in paragraph at lines 40--44
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 47--51
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
+\T2A/cmtt/m/n/14.4 / / docs . microsoft . com / ru-[]ru / dotnet / api / system
+ . diagnostics .
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 54--58
+[]\T2A/cmr/m/n/14.4 ƒокументаци€ по —# [Ёлек-трон-ный ре-сурс].  –е-жим до-сту-
+па:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / a
+pi / system . threading .
+ []
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 54--58
+\T2A/cmtt/m/n/14.4 tasks . parallel . foreach ? view = netframework-[]4 . 8$[] 
+\T2A/cmr/m/n/14.4 (да-та об-ра-ще-ни€:
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 61--65
 []\T2A/cmr/m/n/14.4 Windows [Ёлек-трон-ный ре-сурс].  –е-жим до-сту-па: []$\T2A
 /cmtt/m/n/14.4 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
 []\T2A/cmr/m/n/14.4 ѕроцессор Intel\TS1/cmr/m/n/14.4 Ѓ \T2A/cmr/m/n/14.4 Core\T
 S1/cmr/m/n/14.4 Ч \T2A/cmr/m/n/14.4 i5-1135G7 [Ёлек-трон-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
 \T2A/cmr/m/n/14.4 ный ре-сурс].  –е-жим до-сту-па: []$\T2A/cmtt/m/n/14.4 https 
 : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
 \T2A/cmtt/m/n/14.4 intel . ru / content / www / ru / ru / products / sku / 2086
 58 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
 \T2A/cmtt/m/n/14.4 intel-[]core-[]i51135g7-[]processor-[]8m-[]cache-[]up-[]to-[
 ]4-[]20-[]ghz /
  []
 
-)) [21
+)) [24
 
 
 
@@ -1532,16 +1598,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 (./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
 (./50-conclusion.aux) (./51-biblio.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 2B4062D3302039670F6A18646E6CF4F1;3259.
+(rerunfilecheck)             Checksum: 73BFD9BD3BCA27C8C15E49274C76B64C;4183.
  ) 
 Here is how much of TeX's memory you used:
- 38014 strings out of 478893
- 869235 string characters out of 5867671
- 1378737 words of memory out of 5000000
- 54981 multiletter control sequences out of 15000+600000
- 418610 words of font info for 58 fonts, out of 8000000 for 9000
+ 38061 strings out of 478893
+ 870139 string characters out of 5867671
+ 1379253 words of memory out of 5000000
+ 55012 multiletter control sequences out of 15000+600000
+ 420235 words of font info for 60 fonts, out of 8000000 for 9000
  1038 hyphenation exceptions out of 8191
- 106i,9n,102p,800b,1999s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,9n,102p,800b,1898s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/tex
 live/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-di
@@ -1550,17 +1616,17 @@ type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx12
 00.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:
-/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-
-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts
-/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/cm-super/sfss1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt144
-0.pfb>
-Output written on report.pdf (21 pages, 416091 bytes).
+/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2
+021/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2021/texmf-
+dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts
+/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
+er/sfss1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx120
+0.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on report.pdf (24 pages, 465879 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 138 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

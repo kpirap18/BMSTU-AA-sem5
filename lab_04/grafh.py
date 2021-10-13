@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 
 count = [1, 4, 8, 16,  32]
 
-trace = [14021.29 for i in range(5)]
-paralltrace = [14021.29, 13848.28, 8434.71, 12263.14, 7054.88]
+trace = [69756.29 for i in range(5)]
+paralltrace = [69756.29, 14614.38, 9061.10, 7912.95, 8570.70]
 
 fig, ax = plt.subplots()
 
@@ -19,7 +19,7 @@ ax.plot(count, paralltrace, label="Параллельноая сортировк
 
 ax.scatter(count, paralltrace, c='deeppink')
 
-ax.scatter([1, 32], [14021.29, 14021.29], c='blue')
+ax.scatter([1, 32], [69756.29, 69756.29], c='blue')
 
 
 ax.legend()
@@ -29,9 +29,9 @@ ax.set_ylabel('Время (мс)')
 
 plt.show()
 
-
-
-
+# paralltrace 100000= [69756.29, 14614.38, 9061.10, 7912.95, 3570.70]
+#paralltrace  50000= [49273.61, 6558.07, 6812.70, 5611.97, 5152.66]
+# paralltrace 10000 = [754.65, 126.33, 208.29, 117.95, 109.02]
 # res1000 = [ 237.51, 132.10, 26.69, 38.80,12.48]
 # res10000 = [661.43, 567.41, 423.90, 445.27, 493.91]
 # res50000 = [14021.29, 13848.28, 8434.71, 12263.14, 7054.88]

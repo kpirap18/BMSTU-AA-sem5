@@ -1,0 +1,16 @@
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.exe
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.deps.json
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.runtimeconfig.json
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.runtimeconfig.dev.json
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.dll
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\ref\homework.dll
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\bin\Debug\net5.0\homework.pdb
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.csproj.AssemblyReference.cache
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.AssemblyInfoInputs.cache
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.AssemblyInfo.cs
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.csproj.CoreCompileInputs.cache
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.dll
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\ref\homework.dll
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.pdb
+C:\Users\kiv09\Documents\sem5\aa\homework\homework\obj\Debug\net5.0\homework.genruntimeconfig.cache

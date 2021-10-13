@@ -9,18 +9,21 @@
 
 В качестве среды разработки выбор сделан в сторону Visual Studio 2019 \cite{wind}. 
 
+Замеры времени производились с помощью класса StopWatch \cite{csharplang1}.
+
 \section{Сведения о модулях программы}
 Программа состоит из двух модулей:
 \begin{enumerate}
-	\item Program.cs - главный файл программы, в котором содержится точка входа в программу.
-	\item Sort.cs - файл с реализацией алгоритма сортировки в двух варинатах (обычный и многопоточный).
+	\item Program.cs - главный файл программы, в котором содержится точка входа в программу, генерация массивов и запись информации в файл (как средство для долговременного хранения информации).
+	\item Sort.cs - файл с реализацией алгоритма ранговой сортировки в двух варинатах (обычный и многопоточный).
 \end{enumerate}
 
 \section{Листинг кода}
 В листингах \ref{lst:simple}, \ref{lst:mnog} представлены реализации алгоритма ранговой сортировки многопоточной и обычной.
 
-Также на листинге \ref{lst:dop} представлен вариант реализации многопоточной программы для ранговой сортировки для замеров на больших массивов при 4 потоках.
+Также на листинге \ref{lst:dop} представлен вариант реализации многопоточной программы для ранговой сортировки для замеров на больших массивов при оптимальном выбранном количестве потоков. Для реализации данного кода использовался метод Parallel.ForEach \cite{mefhod}, который выбирает оптимальное количесво потоков для выполнения задачи.
 
+\captionsetup{singlelinecheck = false, justification=raggedright}
 \begin{lstlisting}[label=lst:simple,caption=Алгоритм ранговой сортировки (обычный)]
 public static string Sequential(ref int[] a)
 {
@@ -45,6 +48,7 @@ public static string Sequential(ref int[] a)
 public static string Parallel(int[] a)
 {
 	int M = 4;
+	int[] b = new int[n];
 	Thread[] thrs = new Thread[M];
 	int n = a.Length;
 
@@ -70,7 +74,7 @@ public static string Parallel(int[] a)
 }
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:dop,caption=Алгоритм ранговой сортировки (обычный)]
+\begin{lstlisting}[label=lst:dop,caption=Алгоритм ранговой сортировки (многопоточной с помощью специального метода)]
 public static int[] SortParall(this int[] a)
 {
 	int n = a.Length;
@@ -92,14 +96,16 @@ public static int[] SortParall(this int[] a)
 }
 \end{lstlisting}
 
+\captionsetup{singlelinecheck = false, justification=centering}
+
 \section{Тестирование}
 
 В таблице \ref{tbl:functional_test} приведены тесты для функций, реализующих алгоритмы сортировки. Тесты пройдены успешно.
 
-
+\clearpage
 \begin{table}[h]
 	\begin{center}
-		\caption{\label{tbl:functional_test} Функциональные тесты}
+	\caption{\label{tbl:functional_test} Функциональные тесты}
 		\begin{tabular}{|c|c|c|}
 			\hline
 			Входной массив & Ожидаемый результат & Результат \\ 

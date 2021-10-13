@@ -42,6 +42,20 @@ Visual Studio Microsoft [Электронный ресурс].
   \url{https://visualstudio.microsoft.com/ru/downloads/} (дата
   обращения: 30.09.2021).
 
+\bibitem{csharplang1}
+\selectlanguageifdefined{russian}
+Класс StopWacth [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://docs.microsoft.com/ru-ru/dotnet/api/system.diagnostics.stopwatch?view=net-5.0}
+  (дата обращения: 09.10.2021).
+
+\bibitem{mefhod}
+\selectlanguageifdefined{russian}
+Документация по С\# [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://docs.microsoft.com/ru-ru/dotnet/api/system.threading.tasks.parallel.foreach?view=netframework-4.8}
+  (дата обращения: 04.10.2021).
+
 \bibitem{oswind}
 \selectlanguageifdefined{russian}
 Windows [Электронный ресурс].
