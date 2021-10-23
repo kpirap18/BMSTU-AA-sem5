@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  20 OCT 2021 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  21 OCT 2021 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<inc/img/b_logo.jpg, id=103, 57.816pt x 65.3715pt>
+<inc/img/b_logo.jpg, id=100, 57.816pt x 65.3715pt>
 File: inc/img/b_logo.jpg Graphic file (type jpg)
 <use inc/img/b_logo.jpg>
 Package pdftex.def Info: inc/img/b_logo.jpg  used on input line 6.
@@ -1345,9 +1345,9 @@ o.jpg>])
 \openout2 = `02-intro.aux'.
 
  (./02-intro.tex
-Overfull \hbox (4.93681pt too wide) in paragraph at lines 12--16
-[]\T2A/cmr/m/n/14.4 Целью ра-бо-ты ра-бо-ты яв-ля-ет-ся изу-че-ние и ре-а-ли-за
--ция ал-го-рит-мов умно-
+Overfull \hbox (16.96227pt too wide) in paragraph at lines 20--21
+\T2A/cmr/m/n/14.4 нен-ной ла-бо-ра-тор-ной ра-бо-те, вы-пол-нен-но-го как расчј
+тно-пояснительная
  []
 
 ) [3
@@ -1360,199 +1360,138 @@ Overfull \hbox (4.93681pt too wide) in paragraph at lines 12--16
 
  (./10-analysis.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
-
-Overfull \hbox (3.04016pt too wide) in paragraph at lines 6--7
-[]\T2A/cmr/bx/n/14.4 Матрица \T2A/cmr/m/n/14.4 [[]] ^^U ма-те-ма-ти-че-ский объ
--ект, эк-ви-ва-лент-ный дву-мер-но-му мас-
- []
-
 [4
 
 
 
 
-]
-Overfull \hbox (6.44434pt too wide) in paragraph at lines 54--57
-[]\T2A/cmr/bx/n/14.4 Алгоритм Копперсмита-Винограда \T2A/cmr/m/n/14.4 [[]] ^^V 
-ал-го-ритм умно-же-ния квад-
- []
-
-[5]) [6]
+]) [5]
 \openout2 = `20-design.aux'.
 
  (./20-design.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-<inc/img/standart.png, id=189, 703.87968pt x 525.46312pt>
-File: inc/img/standart.png Graphic file (type png)
-<use inc/img/standart.png>
-Package pdftex.def Info: inc/img/standart.png  used on input line 10.
-(pdftex.def)             Requested size: 571.72899pt x 426.79134pt.
+<inc/img/s1.png, id=169, 681.29532pt x 621.07031pt>
+File: inc/img/s1.png Graphic file (type png)
+<use inc/img/s1.png>
+Package pdftex.def Info: inc/img/s1.png  used on input line 15.
+(pdftex.def)             Requested size: 468.18147pt x 426.79134pt.
 
-Overfull \hbox (102.2585pt too wide) in paragraph at lines 10--10
- [] 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7
+[6
 
 
 
 
- <./inc/img/standart.png>]
-<inc/img/vinograd1.png, id=200, 534.49687pt x 469.00218pt>
-File: inc/img/vinograd1.png Graphic file (type png)
-<use inc/img/vinograd1.png>
-Package pdftex.def Info: inc/img/vinograd1.png  used on input line 15.
-(pdftex.def)             Requested size: 486.38475pt x 426.79134pt.
+] [7 <./inc/img/s1.png>]
+<inc/img/s2.png, id=186, 677.53125pt x 537.50812pt>
+File: inc/img/s2.png Graphic file (type png)
+<use inc/img/s2.png>
+Package pdftex.def Info: inc/img/s2.png  used on input line 21.
+(pdftex.def)             Requested size: 502.10962pt x 398.33858pt.
 
-Overfull \hbox (16.91426pt too wide) in paragraph at lines 15--15
+Overfull \hbox (32.63913pt too wide) in paragraph at lines 21--21
  [] 
  []
 
 [8
 
- <./inc/img/vinograd1.png>]
-<inc/img/vinograd2.png, id=208, 566.86781pt x 464.4853pt>
-File: inc/img/vinograd2.png Graphic file (type png)
-<use inc/img/vinograd2.png>
-Package pdftex.def Info: inc/img/vinograd2.png  used on input line 17.
-(pdftex.def)             Requested size: 520.87599pt x 426.79134pt.
+ <./inc/img/s2.png>]
+<inc/img/s3.png, id=194, 468.24937pt x 622.57594pt>
+File: inc/img/s3.png Graphic file (type png)
+<use inc/img/s3.png>
+Package pdftex.def Info: inc/img/s3.png  used on input line 31.
+(pdftex.def)             Requested size: 320.99895pt x 426.79134pt.
+ [9
 
-Overfull \hbox (51.4055pt too wide) in paragraph at lines 17--17
- [] 
+ <./inc/img/s3.png>]
+Overfull \hbox (6.83292pt too wide) in paragraph at lines 36--37
+[]\T2A/cmr/m/n/14.4 Схема под-сче-та ко-ли-че-ства эле-мен-тов в мас-си-ве, бол
+ь-ших сред-не-го ариф-
  []
 
-[9
+<inc/img/s4.png, id=202, 629.35126pt x 645.16031pt>
+File: inc/img/s4.png Graphic file (type png)
+<use inc/img/s4.png>
+Package pdftex.def Info: inc/img/s4.png  used on input line 38.
+(pdftex.def)             Requested size: 416.33342pt x 426.79134pt.
+[10
 
- <./inc/img/vinograd2.png>]
-<inc/img/vinograd1_op.png, id=215, 572.89032pt x 544.28343pt>
-File: inc/img/vinograd1_op.png Graphic file (type png)
-<use inc/img/vinograd1_op.png>
-Package pdftex.def Info: inc/img/vinograd1_op.png  used on input line 22.
-(pdftex.def)             Requested size: 449.22162pt x 426.79134pt.
- [10
+ <./inc/img/s4.png>]
+<inc/img/s5.png, id=210, 584.93532pt x 655.69969pt>
+File: inc/img/s5.png Graphic file (type png)
+<use inc/img/s5.png>
+Package pdftex.def Info: inc/img/s5.png  used on input line 45.
+(pdftex.def)             Requested size: 380.73004pt x 426.79134pt.
+) [11
 
- <./inc/img/vinograd1_op.png>]
-<inc/img/vinograd2_op.png, id=223, 472.01344pt x 638.385pt>
-File: inc/img/vinograd2_op.png Graphic file (type png)
-<use inc/img/vinograd2_op.png>
-Package pdftex.def Info: inc/img/vinograd2_op.png  used on input line 24.
-(pdftex.def)             Requested size: 315.56314pt x 426.79134pt.
- [11
-
- <./inc/img/vinograd2_op.png>]
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-37.
- (c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-[12
-
-] [13] [14]
-Overfull \hbox (3.24136pt too wide) in paragraph at lines 158--159
-[]\T2A/cmr/m/n/14.4 цикла за-пол-не-ния для чјт-ных раз-ме-ров, тру-до-јм-кость
- ко-то-ро-го ([]2.15[]): 
- []
-
-
-Overfull \hbox (6.11359pt too wide) in paragraph at lines 164--165
-[]\T2A/cmr/m/n/14.4 условие, для до-пол-не-ния умно-же-ния сум-мой по-след-них 
-нечјт-ных стро-
- []
-
-) [15]
+ <./inc/img/s5.png>]
 \openout2 = `30-impl.aux'.
 
  (./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-
-Overfull \hbox (32.13043pt too wide) in paragraph at lines 21--22
-[]\T2A/cmr/m/n/14.4 Время ра-бо-ты ал-го-рит-мов бы-ло за-ме-ре-но с по-мо-щью 
-функ-ции process_time()
- []
-
-[16
+LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
+25.
+(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+) [12
 
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
-38.
- (c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
-File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-42.
+53.
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [17] [18] [19]) [20
-
-]
+) [13] [14] [15] [16]
+[17] [18]) [19]
 \openout2 = `40-research.aux'.
 
-
-(./40-research.tex
+ (./40-research.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-[21
+<inc/img/prim.png, id=476, 413.29407pt x 610.53094pt>
+File: inc/img/prim.png Graphic file (type png)
+<use inc/img/prim.png>
+Package pdftex.def Info: inc/img/prim.png  used on input line 20.
+(pdftex.def)             Requested size: 365.97017pt x 540.60236pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20
 
 
 
 
-]
-<inc/img/example.png, id=430, 476.53032pt x 560.0925pt>
-File: inc/img/example.png Graphic file (type png)
-<use inc/img/example.png>
-Package pdftex.def Info: inc/img/example.png  used on input line 23.
-(pdftex.def)             Requested size: 351.02724pt x 412.56496pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<inc/img/1.png, id=435, 752.8125pt x 526.96875pt>
-File: inc/img/1.png Graphic file (type png)
-<use inc/img/1.png>
-Package pdftex.def Info: inc/img/1.png  used on input line 60.
-(pdftex.def)             Requested size: 528.43549pt x 369.88582pt.
-
-Overfull \hbox (58.965pt too wide) in paragraph at lines 60--60
- [] 
- []
+] [21 <./inc/img/prim.png>]
+<inc/img/f1.png, id=493, 481.8pt x 361.35pt>
+File: inc/img/f1.png Graphic file (type png)
+<use inc/img/f1.png>
+Package pdftex.def Info: inc/img/f1.png  used on input line 48.
+(pdftex.def)             Requested size: 379.37538pt x 284.52756pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<inc/img/2.png, id=436, 752.8125pt x 526.96875pt>
-File: inc/img/2.png Graphic file (type png)
-<use inc/img/2.png>
-Package pdftex.def Info: inc/img/2.png  used on input line 87.
-(pdftex.def)             Requested size: 528.43549pt x 369.88582pt.
-
-Overfull \hbox (58.965pt too wide) in paragraph at lines 87--87
- [] 
- []
-
+<inc/img/f2.png, id=494, 481.8pt x 361.35pt>
+File: inc/img/f2.png Graphic file (type png)
+<use inc/img/f2.png>
+Package pdftex.def Info: inc/img/f2.png  used on input line 50.
+(pdftex.def)             Requested size: 379.37538pt x 284.52756pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22
 
- <./inc/img/example.png>] [23 <./inc/img/1.png>] [24 <./inc/img/2.png>])
-[25
+] [23 <./inc/img/f1.png> <./inc/img/f2.png>] [24
+
+]) [25
 
 ]
 \openout2 = `50-conclusion.aux'.
 
- (./50-conclusion.tex
-Overfull \hbox (5.37364pt too wide) in paragraph at lines 7--8
-\T2A/cmr/m/n/14.4 обыч-ный, Копперсмита-Винограда, мо-ди-фи-ци-ро-ван-ный Коппе
-рсмита-
- []
-
-) [26
+ (./50-conclusion.tex) [26
 
 
 
@@ -1561,25 +1500,79 @@ Overfull \hbox (5.37364pt too wide) in paragraph at lines 7--8
 \openout2 = `51-biblio.aux'.
 
  (./51-biblio.tex (./report.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+15.
+
+(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+Underfull \hbox (badness 2173) in paragraph at lines 12--17
+[]\T2A/cmr/m/n/14.4 Конвейерная ор-га-ни-за-ция [Элек-трон-ный ре-сурс].  Ре-жи
+м до-сту-
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 20--24
+[]\T2A/cmr/m/n/14.4 Документация по С# [Элек-трон-ный ре-сурс].  Ре-жим до-сту-
+па:
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 20--24
+[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / c
+sharp/$[] \T2A/cmr/m/n/14.4 (да-та об-ра-ще-
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 27--31
+[]\T2A/cmr/m/n/14.4 Visual Studio Microsoft [Элек-трон-ный ре-сурс].  Ре-жим до
+-сту-па:
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 34--38
+[]\T2A/cmr/m/n/14.4 СТруктура DateTime [Элек-трон-ный ре-сурс].  Ре-жим до-сту-
+па:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / a
+pi / system . datetime ?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
+[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / a
+pi / system . datetime .
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 48--52
+[]\T2A/cmr/m/n/14.4 Windows [Элек-трон-ный ре-сурс].  Ре-жим до-сту-па: []$\T2A
+/cmtt/m/n/14.4 https : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 []\T2A/cmr/m/n/14.4 Процессор Intel\TS1/cmr/m/n/14.4 ® \T2A/cmr/m/n/14.4 Core\T
 S1/cmr/m/n/14.4 — \T2A/cmr/m/n/14.4 i5-1135G7 [Элек-трон-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 \T2A/cmr/m/n/14.4 ный ре-сурс].  Ре-жим до-сту-па: []$\T2A/cmtt/m/n/14.4 https 
 : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 \T2A/cmtt/m/n/14.4 intel . ru / content / www / ru / ru / products / sku / 2086
 58 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 \T2A/cmtt/m/n/14.4 intel-[]core-[]i51135g7-[]processor-[]8m-[]cache-[]up-[]to-[
 ]4-[]20-[]ghz /
  []
@@ -1593,38 +1586,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--63
 (./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
 (./50-conclusion.aux) (./51-biblio.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 647CD8D4263FD09F0BCA01480C0E387B;5449.
+(rerunfilecheck)             Checksum: D64520DCCE0C0D7DC3F01D78948D77E0;4815.
  ) 
 Here is how much of TeX's memory you used:
- 38120 strings out of 478893
- 871738 string characters out of 5867671
- 1397039 words of memory out of 5000000
- 55016 multiletter control sequences out of 15000+600000
- 423063 words of font info for 64 fonts, out of 8000000 for 9000
+ 38296 strings out of 478893
+ 873728 string characters out of 5867671
+ 1341506 words of memory out of 5000000
+ 55106 multiletter control sequences out of 15000+600000
+ 420578 words of font info for 61 fonts, out of 8000000 for 9000
  1038 hyphenation exceptions out of 8191
- 106i,16n,102p,1091b,1900s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,9n,102p,1077b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/tex
 live/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:
-/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-
-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2021/texmf-dist/fonts
-/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm144
-0.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb><c:/
-texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/20
-21/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-d
-ist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (27 pages, 586557 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-supe
+r/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728
+.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/202
+1/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-di
+st/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/cm-super/sfss1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
+c/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
+/sftt1440.pfb>
+Output written on report.pdf (27 pages, 516791 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
- 197 named destinations out of 1000 (max. 500000)
- 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 588 compressed objects within 6 object streams
+ 284 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

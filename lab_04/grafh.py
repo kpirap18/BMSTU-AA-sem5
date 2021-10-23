@@ -56,3 +56,5 @@ plt.show()
 # plt.xlabel("Длина")
 #
 # plt.show()
+
+

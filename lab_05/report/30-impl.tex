@@ -1,0 +1,321 @@
+\chapter{Технологическая часть}
+В данном разделе будут приведены требования к программному обеспечению, средства реализации и листинги кода.
+
+\section{Выбор языка программирования}
+
+В данной лабораторной работе использовался язык программирования - С\# \cite{csharplang}.
+
+Данный язык является нативным.
+
+В качестве среды разработки выбор сделан в сторону Visual Studio 2019 \cite{wind}. 
+
+Замеры времени производились с помощью структуры DateTime \cite{csharplang1} и свойства DateTime.Now.Ticks \cite{csharplang2}.
+
+\section{Сведения о модулях программы}
+Программа состоит из одного модуля:
+\begin{enumerate}
+	\item Program.cs - главный файл программы, в котором содержится точка входа в программу, генерация массивов и очередей, а также реализация конвейера.
+\end{enumerate}
+
+\section{Листинг кода}
+
+В листинге \ref{lst:con} представлена реализация конвейера.
+
+\captionsetup{singlelinecheck = false, justification=raggedright}
+\begin{lstlisting}[label=lst:con,caption=Реализация конвейера]
+public static void Conveyor(object obj)
+{ 
+	ThreadArgs args = (ThreadArgs)obj;
+	int avg = 0, count = 0, proc = 0;
+	
+	intPtr array;
+	
+	if (args.firstQueue.Count != 0)
+	{ 
+		lock (args.firstQueue)
+		{
+			array = args.firstQueue.Dequeue();
+		}
+		
+		lock (FStage)
+		{
+			Int64 t1, t2;
+			t1 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 1 \t{0} \t1 \t{1}",
+			Thread.CurrentThread.Name,
+			t1);
+			
+			avg = AvgArrayInt(array);
+			
+			t2 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 1 \t{0} \t0 \t{1} \t{2}",
+			Thread.CurrentThread.Name,
+			t1, t2 - t1);
+		}
+		
+		lock (args.secondQueue)
+		{
+			Int64 t = DateTime.Now.Ticks;
+			time2in.Add(t);
+			args.secondQueue.Enqueue(array);
+		}
+	}
+	
+	if (args.secondQueue.Count != 0)
+	{
+		lock (SStage)
+		{
+			Int64 t1, t2;
+			t1 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 2 \t{0} \t1 \t{1}",
+			Thread.CurrentThread.Name,
+			t1);
+			
+			lock (args.secondQueue)
+			{
+				Int64 t = DateTime.Now.Ticks;
+				time2out.Add(t);
+				array = args.secondQueue.Dequeue();
+			}
+			
+			count = CountBigAvgInt(array, avg);
+			
+			t2 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 2 \t{0} \t0 \t{1} \t{2}",
+			Thread.CurrentThread.Name,
+			t1, t2 - t1);
+		}
+		
+		lock (args.thirdQueue)
+		{
+			Int64 t = DateTime.Now.Ticks;
+			time3in.Add(t);
+			args.thirdQueue.Enqueue(array);
+		}
+	}
+	
+	if (args.thirdQueue.Count != 0)
+	{
+		lock (TStage)
+		{
+			Int64 t1, t2;
+			t1 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 3 \t{0} \t1 \t{1}",
+			Thread.CurrentThread.Name,
+			t1);
+			
+			lock (args.thirdQueue)
+			{
+				Int64 t = DateTime.Now.Ticks;
+				time3out.Add(t);
+				array = args.thirdQueue.Dequeue();
+			}
+			
+			proc = CountIsProc(count);
+			
+			t2 = DateTime.Now.Ticks;
+			Console.WriteLine("Lenta 3 \t{0} \t0 \t{1} \t{2}",
+			Thread.CurrentThread.Name,
+			t1, t2 - t1);
+		}
+	}
+}
+\end{lstlisting}
+
+В листинге \ref{lst:potok} представлен метод создания и запуска потоков, метод MainTread основного класса программы.
+
+\begin{lstlisting}[label=lst:potok,caption=Метод создания и запуска потоков]
+public static void MainTread(Queue<intPtr> queue)
+{	
+	ThreadArgs args = new ThreadArgs(queue);
+	
+	Thread FThread = new Thread(new ParameterizedThreadStart(Conveyor));
+	FThread.Name = "Potok 1";
+	
+	Thread SThread = new Thread(new ParameterizedThreadStart(Conveyor));
+	SThread.Name = "Potok 2";
+	
+	Thread TThread = new Thread(new ParameterizedThreadStart(Conveyor));
+	TThread.Name = "Potok 3";
+	
+	FThread.Start(args);
+	SThread.Start(args);
+	TThread.Start(args);
+	
+	while (args.firstQueue.Count != 0)
+	{
+		if (!FThread.IsAlive)
+		{
+			FThread = new Thread(new ParameterizedThreadStart(Conveyor));
+			FThread.Name = "Potok 1";
+			FThread.Start(args);
+		}
+		
+		if (!SThread.IsAlive)
+		{
+			SThread = new Thread(new ParameterizedThreadStart(Conveyor));
+			SThread.Name = "Potok 2";
+			SThread.Start(args);
+		}
+		
+		if (!TThread.IsAlive)
+		{
+			TThread = new Thread(new ParameterizedThreadStart(Conveyor));
+			TThread.Name = "Potok 3";
+			TThread.Start(args);
+		}
+	}
+
+	FThread.Join();
+	SThread.Join();
+	TThread.Join();
+}
+\end{lstlisting}
+
+В листинге \ref{lst:c1} представлен код задачи, выполняемой на первой ленте конвейера.
+
+\begin{lstlisting}[label=lst:c1,caption=Подсчет среднего арифметического значения в массиве]
+public static int AvgArrayInt(intPtr array)
+{
+	int avg_int = 0, count = 0;
+	for (int i = 0; i < CountOfOperations; i++)
+	{
+		avg_int = 0;
+		count = 0;
+		foreach (var el in array)
+		{
+			avg_int += el;
+			count++;
+		}
+	}
+	avg_int /= count;
+	return avg_int;
+}
+\end{lstlisting}
+
+В листинге \ref{lst:c2} представлен код задачи, выполняемой на второй ленте конвейера.
+
+\begin{lstlisting}[label=lst:c2,caption=Подсчет количества элементов в массиве больших среднего арифметического значения]
+public static int CountBigAvgInt(intPtr array, int num)
+{
+	int count = 0;
+	for (int i = 0; i < CountOfOperations; i++)
+	{
+		count = 0;
+		foreach (var el in array)
+			if (el > num)
+				count++;
+	}
+	return count;
+}
+\end{lstlisting}
+
+
+В листинге \ref{lst:c3} представлен код задачи, выполняемой на третьей ленте конвейера.
+
+\begin{lstlisting}[label=lst:c3,caption=Реализация алгоритма определния числа на простоту]
+public static int CountIsProc(int num)
+{
+	int res = 1;
+	for (int k = 0; k < CountOfOperations; k++)
+	{
+		if (num > 1)
+			for (int i = 2; i < num; i++)
+				if (num % i == 0)
+				{
+					res = 0;
+					break;
+				}
+		else
+			res = 0;
+	}
+	return res;
+}
+\end{lstlisting}
+
+\captionsetup{singlelinecheck = false, justification=centering}
+
+\section{Тестирование}
+
+В таблице \ref{tbl:functional_test} приведены тесты для функций, реализующих алгоритмы сортировки. Тесты пройдены успешно.
+
+Сокращение для таблицы: КЗ и ДМ - количество задач и длина массива, М - массив, ОР - ожидаемый результат, ДР - действительный результат.
+
+\begin{table}[h]
+	\begin{center}
+	\caption{\label{tbl:functional_test} Функциональные тесты}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			КЗ и ДМ & М & ОР & ДР \\ 
+			\hline
+			5, 4  & $[1,4,8,2]$        & 1 & 1\\
+			1, 3  & $[9,12,-1]$        & 1 & 1\\
+			2, 7  & $[1,3,2,1,0,1,2]$  & 1 & 1\\
+			2, 3  & $[4,2,1]$          & 0 & 0\\
+			1, 4  & $[0,3,-1,3]$       & 1 & 1\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+В таблице \ref{tbl:ft2} приведены тесты для функции, реализующей алгоритм на ленте 1.
+
+\begin{table}[h]
+	\begin{center}
+		\caption{\label{tbl:ft2} Функциональные тесты для ленты 1}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Массив & Ожидаемый результат & Действительный результат \\ 
+			\hline
+			 $[1,4,8,2]$        & 3 & 3\\
+			 $[9,12,-1]$        & 6 & 6\\
+			 $[1,3,2,1,0,1,2]$  & 1 & 1\\
+			 $[4,2,1]$          & 2 & 2\\
+			 $[0,3,-1,3]$       & 1 & 1\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+В таблице \ref{tbl:ft3} приведены тесты для функции, реализующей алгоритм на ленте 2.
+
+\begin{table}[h]
+	\begin{center}
+		\caption{\label{tbl:ft3} Функциональные тесты для ленты 2}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Массив и число & Ожидаемый результат & Действительный результат \\ 
+			\hline
+			$[1,4,8,2]$ , 3        & 2 & 2\\
+			$[9,12,-1]$ , 6        & 2 & 2\\
+			$[1,3,2,1,0,1,2]$ , 1  & 3 & 3\\
+			$[4,2,1]$ , 2          & 1 & 1\\
+			$[0,3,-1,3]$ , 1       & 3 & 3\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+В таблице \ref{tbl:ft4} приведены тесты для функции, реализующей алгоритм на ленте 3.
+
+\begin{table}[h]
+	\begin{center}
+		\caption{\label{tbl:ft4} Функциональные тесты для ленты 3}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Число & Ожидаемый результат & Действительный результат \\ 
+			\hline
+			2  & 1 & 1\\
+			2  & 1 & 1\\
+			3  & 1 & 1\\
+			1  & 0 & 0\\
+			3  & 1 & 1\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+\section{Вывод}
+В данном разделе были разобраны листинги  показывающие
+работу конвейера, а также каждой ленты.
