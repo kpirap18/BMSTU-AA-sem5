@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  21 OCT 2021 01:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  28 OCT 2021 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<inc/img/b_logo.jpg, id=100, 57.816pt x 65.3715pt>
+<inc/img/b_logo.jpg, id=108, 57.816pt x 65.3715pt>
 File: inc/img/b_logo.jpg Graphic file (type jpg)
 <use inc/img/b_logo.jpg>
 Package pdftex.def Info: inc/img/b_logo.jpg  used on input line 6.
@@ -1370,128 +1370,151 @@ Overfull \hbox (16.96227pt too wide) in paragraph at lines 20--21
 
  (./20-design.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-<inc/img/s1.png, id=169, 681.29532pt x 621.07031pt>
-File: inc/img/s1.png Graphic file (type png)
-<use inc/img/s1.png>
-Package pdftex.def Info: inc/img/s1.png  used on input line 15.
-(pdftex.def)             Requested size: 468.18147pt x 426.79134pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [6
 
 
 
 
-] [7 <./inc/img/s1.png>]
-<inc/img/s2.png, id=186, 677.53125pt x 537.50812pt>
-File: inc/img/s2.png Graphic file (type png)
-<use inc/img/s2.png>
-Package pdftex.def Info: inc/img/s2.png  used on input line 21.
-(pdftex.def)             Requested size: 502.10962pt x 398.33858pt.
+]
+<inc/img/s1.png, id=185, 335.00156pt x 604.50844pt>
+File: inc/img/s1.png Graphic file (type png)
+<use inc/img/s1.png>
+Package pdftex.def Info: inc/img/s1.png  used on input line 29.
+(pdftex.def)             Requested size: 315.35645pt x 569.05511pt.
 
-Overfull \hbox (32.63913pt too wide) in paragraph at lines 21--21
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7] [8 <./inc/img/s1.png>]
+<inc/img/o1.png, id=198, 363.60844pt x 497.60907pt>
+File: inc/img/o1.png Graphic file (type png)
+<use inc/img/o1.png>
+Package pdftex.def Info: inc/img/o1.png  used on input line 34.
+(pdftex.def)             Requested size: 415.84949pt x 569.05511pt.
+ [9
+
+ <./inc/img/o1.png>]
+<inc/img/o2.png, id=207, 569.87906pt x 654.19406pt>
+File: inc/img/o2.png Graphic file (type png)
+<use inc/img/o2.png>
+Package pdftex.def Info: inc/img/o2.png  used on input line 39.
+(pdftex.def)             Requested size: 495.71251pt x 569.05511pt.
+
+Overfull \hbox (26.24202pt too wide) in paragraph at lines 39--39
  [] 
  []
 
-[8
+[10
 
- <./inc/img/s2.png>]
-<inc/img/s3.png, id=194, 468.24937pt x 622.57594pt>
+ <./inc/img/o2.png>]
+<inc/img/o3.png, id=214, 394.47375pt x 662.475pt>
+File: inc/img/o3.png Graphic file (type png)
+<use inc/img/o3.png>
+Package pdftex.def Info: inc/img/o3.png  used on input line 44.
+(pdftex.def)             Requested size: 338.8616pt x 569.05511pt.
+ [11
+
+ <./inc/img/o3.png>]
+<inc/img/s3.png, id=221, 468.24937pt x 622.57594pt>
 File: inc/img/s3.png Graphic file (type png)
 <use inc/img/s3.png>
-Package pdftex.def Info: inc/img/s3.png  used on input line 31.
+Package pdftex.def Info: inc/img/s3.png  used on input line 53.
 (pdftex.def)             Requested size: 320.99895pt x 426.79134pt.
- [9
+ [12
 
  <./inc/img/s3.png>]
-Overfull \hbox (6.83292pt too wide) in paragraph at lines 36--37
+Overfull \hbox (6.83292pt too wide) in paragraph at lines 58--59
 []\T2A/cmr/m/n/14.4 Схема под-сче-та ко-ли-че-ства эле-мен-тов в мас-си-ве, бол
 ь-ших сред-не-го ариф-
  []
 
-<inc/img/s4.png, id=202, 629.35126pt x 645.16031pt>
+<inc/img/s4.png, id=229, 629.35126pt x 645.16031pt>
 File: inc/img/s4.png Graphic file (type png)
 <use inc/img/s4.png>
-Package pdftex.def Info: inc/img/s4.png  used on input line 38.
+Package pdftex.def Info: inc/img/s4.png  used on input line 60.
 (pdftex.def)             Requested size: 416.33342pt x 426.79134pt.
-[10
+[13
 
  <./inc/img/s4.png>]
-<inc/img/s5.png, id=210, 584.93532pt x 655.69969pt>
+<inc/img/s5.png, id=237, 584.93532pt x 655.69969pt>
 File: inc/img/s5.png Graphic file (type png)
 <use inc/img/s5.png>
-Package pdftex.def Info: inc/img/s5.png  used on input line 45.
+Package pdftex.def Info: inc/img/s5.png  used on input line 67.
 (pdftex.def)             Requested size: 380.73004pt x 426.79134pt.
-) [11
+) [14
 
  <./inc/img/s5.png>]
 \openout2 = `30-impl.aux'.
 
  (./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
-25.
-(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
-File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) [12
+[15
 
 
 
 
 ]
+LaTeX Font Info:    Trying to load font information for T2A+cmss on input line 
+27.
+ (c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-53.
+55.
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [13] [14] [15] [16]
-[17] [18]) [19]
+) [16] [17] [18] [19]
+[20]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [21] [22]
 \openout2 = `40-research.aux'.
 
  (./40-research.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-<inc/img/prim.png, id=476, 413.29407pt x 610.53094pt>
+<inc/img/prim.png, id=487, 329.73187pt x 518.6878pt>
 File: inc/img/prim.png Graphic file (type png)
 <use inc/img/prim.png>
-Package pdftex.def Info: inc/img/prim.png  used on input line 20.
-(pdftex.def)             Requested size: 365.97017pt x 540.60236pt.
+Package pdftex.def Info: inc/img/prim.png  used on input line 25.
+(pdftex.def)             Requested size: 325.61041pt x 512.1496pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20
+[23
 
 
 
 
-] [21 <./inc/img/prim.png>]
-<inc/img/f1.png, id=493, 481.8pt x 361.35pt>
+] [24 <./inc/img/prim.png>]
+<inc/img/f1.png, id=504, 462.528pt x 346.896pt>
 File: inc/img/f1.png Graphic file (type png)
 <use inc/img/f1.png>
-Package pdftex.def Info: inc/img/f1.png  used on input line 48.
-(pdftex.def)             Requested size: 379.37538pt x 284.52756pt.
+Package pdftex.def Info: inc/img/f1.png  used on input line 53.
+(pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inc/img/f2.png, id=494, 481.8pt x 361.35pt>
+<inc/img/f2.png, id=505, 462.528pt x 346.896pt>
 File: inc/img/f2.png Graphic file (type png)
 <use inc/img/f2.png>
-Package pdftex.def Info: inc/img/f2.png  used on input line 50.
-(pdftex.def)             Requested size: 379.37538pt x 284.52756pt.
+Package pdftex.def Info: inc/img/f2.png  used on input line 55.
+(pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22
+[25
 
-] [23 <./inc/img/f1.png> <./inc/img/f2.png>] [24
+] [26 <./inc/img/f1.png> <./inc/img/f2.png>] [27
 
-]) [25
+]) [28
 
 ]
 \openout2 = `50-conclusion.aux'.
 
- (./50-conclusion.tex) [26
+ (./50-conclusion.tex) [29
 
 
 
@@ -1577,7 +1600,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--60
 ]4-[]20-[]ghz /
  []
 
-)) [27
+)) [30
 
 
 
@@ -1586,16 +1609,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--60
 (./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
 (./50-conclusion.aux) (./51-biblio.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D64520DCCE0C0D7DC3F01D78948D77E0;4815.
+(rerunfilecheck)             Checksum: C5540FBC0578D78F8D235A6B945726BE;5216.
  ) 
 Here is how much of TeX's memory you used:
- 38296 strings out of 478893
- 873728 string characters out of 5867671
- 1341506 words of memory out of 5000000
- 55106 multiletter control sequences out of 15000+600000
+ 38316 strings out of 478893
+ 874038 string characters out of 5867671
+ 1340837 words of memory out of 5000000
+ 55131 multiletter control sequences out of 15000+600000
  420578 words of font info for 61 fonts, out of 8000000 for 9000
  1038 hyphenation exceptions out of 8191
- 106i,9n,102p,1077b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,9n,102p,1050b,2001s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/tex
 live/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-di
@@ -1610,10 +1633,10 @@ st/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/t
 ype1/public/cm-super/sfss1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
 c/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
 /sftt1440.pfb>
-Output written on report.pdf (27 pages, 516791 bytes).
+Output written on report.pdf (30 pages, 513548 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
- 588 compressed objects within 6 object streams
- 284 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 596 compressed objects within 6 object streams
+ 277 named destinations out of 1000 (max. 500000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 

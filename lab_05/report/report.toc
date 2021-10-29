@@ -1,24 +1,26 @@
 \babel@toc {russian}{}\relax 
 \contentsline {chapter}{Введение}{3}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Аналитическая часть}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Описание конвейреной обработки данных}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Описание конвейерной обработки данных}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Описание алгоритмов}{4}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Вывод}{5}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Конструкторская часть}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Требования к вводу}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Схема алгоритма}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Схема конве1ерной обработки данных}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Схемы алгоритмов на лентах конвейера}{9}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Вывод}{11}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Технологическая часть}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Выбор языка программирования}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Сведения о модулях программы}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Листинг кода}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Тестирование}{18}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Вывод}{19}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Исследовательская часть}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Технические характеристики}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Пример выполнения программы}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Время выполнения алгоритмов}{22}{section.4.3}%
-\contentsline {chapter}{Заключение}{26}{chapter*.18}%
-\contentsline {chapter}{Список литературы}{27}{Item.18}%
+\contentsline {section}{\numberline {2.2}Разработка конвейера}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Разработка алгоритмов}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Алгоритм конвейерной обработки данных}{7}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Алгоритмы на лентах конвейера}{12}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Вывод}{14}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Технологическая часть}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Выбор языка программирования}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Сведения о модулях программы}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Реализация алгоритмов}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Тестирование}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Вывод}{22}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Исследовательская часть}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Технические характеристики}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Пример выполнения программы}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Время выполнения алгоритмов}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Вывод}{28}{section.4.4}%
+\contentsline {chapter}{Заключение}{29}{chapter*.20}%
+\contentsline {chapter}{Список литературы}{30}{Item.17}%

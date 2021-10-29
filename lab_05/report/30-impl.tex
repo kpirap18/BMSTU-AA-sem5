@@ -5,19 +5,21 @@
 
 В данной лабораторной работе использовался язык программирования - С\# \cite{csharplang}.
 
-Данный язык является нативным.
+Данный язык позволяет создавать нативные потоки.
 
 В качестве среды разработки выбор сделан в сторону Visual Studio 2019 \cite{wind}. 
 
 Замеры времени производились с помощью структуры DateTime \cite{csharplang1} и свойства DateTime.Now.Ticks \cite{csharplang2}.
 
 \section{Сведения о модулях программы}
-Программа состоит из одного модуля:
-\begin{enumerate}
-	\item Program.cs - главный файл программы, в котором содержится точка входа в программу, генерация массивов и очередей, а также реализация конвейера.
-\end{enumerate}
+Программа состоит из одного модуля: Program.cs - главный файл программы, в котором содержится точка входа в программу, генерация массивов и очередей, а также реализация конвейера, и всех лент данного конвейера.
 
-\section{Листинг кода}
+\section{Реализация алгоритмов}
+
+За счёт средств языка данный модуль позволяет раздавать задачи из главного потока рабочим потокам. 
+
+Таким образом, в одном модуле описана работа соответствующих потоков, моделирующих ленты конвейера, и все необходимые блокировки: блокировка мьютекса очереди для потокобезопасного добавления и извлечения заявок, а также специфичная для языка т.н. блокировка потока -- средство выдачи задания потоку.
+
 
 В листинге \ref{lst:con} представлена реализация конвейера.
 
@@ -117,6 +119,8 @@ public static void Conveyor(object obj)
 			Console.WriteLine("Lenta 3 \t{0} \t0 \t{1} \t{2}",
 			Thread.CurrentThread.Name,
 			t1, t2 - t1);
+			
+			res.Add(proc);
 		}
 	}
 }
@@ -141,34 +145,19 @@ public static void MainTread(Queue<intPtr> queue)
 	FThread.Start(args);
 	SThread.Start(args);
 	TThread.Start(args);
-	
-	while (args.firstQueue.Count != 0)
-	{
-		if (!FThread.IsAlive)
-		{
-			FThread = new Thread(new ParameterizedThreadStart(Conveyor));
-			FThread.Name = "Potok 1";
-			FThread.Start(args);
-		}
-		
-		if (!SThread.IsAlive)
-		{
-			SThread = new Thread(new ParameterizedThreadStart(Conveyor));
-			SThread.Name = "Potok 2";
-			SThread.Start(args);
-		}
-		
-		if (!TThread.IsAlive)
-		{
-			TThread = new Thread(new ParameterizedThreadStart(Conveyor));
-			TThread.Name = "Potok 3";
-			TThread.Start(args);
-		}
-	}
 
-	FThread.Join();
-	SThread.Join();
-	TThread.Join();
+    if (FThread.IsAlive)
+	{
+		FThread.Join();
+	}
+	if (SThread.IsAlive)
+	{
+		SThread.Join();
+	}
+	if (TThread.IsAlive)
+	{
+		TThread.Join();
+	}
 }
 \end{lstlisting}
 
@@ -279,7 +268,7 @@ public static int CountIsProc(int num)
 
 В таблице \ref{tbl:ft3} приведены тесты для функции, реализующей алгоритм на ленте 2.
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 		\caption{\label{tbl:ft3} Функциональные тесты для ленты 2}
 		\begin{tabular}{|c|c|c|}

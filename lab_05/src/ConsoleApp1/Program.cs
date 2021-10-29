@@ -18,6 +18,8 @@ namespace Lab5
         static longPtr time3out = new longPtr();
         static longPtr time4in = new longPtr();
 
+        static intPtr res = new intPtr();
+
         static object FStage = new object();
         static object SStage = new object();
         static object TStage = new object();
@@ -35,7 +37,7 @@ namespace Lab5
                 array.Add(random.Next(1, 1000));
             }
 
-            PrintArray2(array);
+            //PrintArray2(array);
             return array;
         }
 
@@ -47,7 +49,7 @@ namespace Lab5
             {
                 Int64 t = DateTime.Now.Ticks;
                 time1in.Add(t);
-                Console.Write("{0}: ", i + 1);
+                //Console.Write("{0}: ", i + 1);
                 queue.Enqueue(CreateRandArray(countElem));
             }
 
@@ -164,6 +166,8 @@ namespace Lab5
             
             intPtr array;
 
+           // char c = this.Name
+
             if (args.firstQueue.Count != 0)
             { 
                 lock (args.firstQueue)
@@ -177,17 +181,17 @@ namespace Lab5
                 {
                     Int64 t1, t2;
                     t1 = DateTime.Now.Ticks;
-                    Console.WriteLine("Лента 1 \t{0} \t1 \t{1}",
+                    Console.WriteLine("Лента 1{0} \tS \t{1}",
                         Thread.CurrentThread.Name,
                         t1);
 
                     avg = AvgArrayInt(array);
 
                     t2 = DateTime.Now.Ticks;
-                    Console.WriteLine("Лента 1 \t{0} \t0 \t{1} \t{2}",
+                    Console.WriteLine("Лента 1{0} \tE \t{1} \t{2}",
                         Thread.CurrentThread.Name,
                         t1, t2 - t1);
-                    Console.WriteLine("Результат: {0}", avg);
+                    //Console.WriteLine("Результат: {0}", avg);
                 }
 
                 lock (args.secondQueue)
@@ -205,7 +209,7 @@ namespace Lab5
                 {
                     Int64 t1, t2;
                     t1 = DateTime.Now.Ticks;
-                    Console.WriteLine("Лента 2 \t{0} \t1 \t{1}",
+                    Console.WriteLine("Лента 2{0} \tS \t{1}",
                         Thread.CurrentThread.Name,
                         t1);
 
@@ -219,10 +223,10 @@ namespace Lab5
                     count = CountBigAvgInt(array, avg);
 
                     t2 = DateTime.Now.Ticks;
-                    Console.WriteLine("Лента 2 \t{0} \t0 \t{1} \t{2}",
+                    Console.WriteLine("Лента 2{0} \tE \t{1} \t{2}",
                         Thread.CurrentThread.Name,
                         t1, t2 - t1);
-                    Console.WriteLine("Результат: {0}", count);
+                    //Console.WriteLine("Результат: {0}", count);
                 }
 
                 lock (args.thirdQueue)
@@ -240,7 +244,7 @@ namespace Lab5
                 {
                     Int64 t1, t2;
                     t1 = DateTime.Now.Ticks;
-                    Console.WriteLine("Лента 3 \t{0} \t1 \t{1}",
+                    Console.WriteLine("Лента 3{0} \tS \t{1}",
                         Thread.CurrentThread.Name,
                         t1);
 
@@ -256,10 +260,11 @@ namespace Lab5
 
                     t2 = DateTime.Now.Ticks;
                     time4in.Add(t2);
-                    Console.WriteLine("Лента 3 \t{0} \t0 \t{1} \t{2}",
+                    Console.WriteLine("Лента 3{0} \tE \t{1} \t{2}",
                         Thread.CurrentThread.Name,
                         t1, t2 - t1);
-                    Console.WriteLine("Результат: {0}", proc);
+
+                    res.Add(proc);
                 }
             }
         }
@@ -303,45 +308,27 @@ namespace Lab5
             ThreadArgs args = new ThreadArgs(queue);
 
             Thread FThread = new Thread(new ParameterizedThreadStart(Conveyor));
-            FThread.Name = "Поток 1";
 
             Thread SThread = new Thread(new ParameterizedThreadStart(Conveyor));
-            SThread.Name = "Поток 2";
 
             Thread TThread = new Thread(new ParameterizedThreadStart(Conveyor));
-            TThread.Name = "Поток 3";
 
             FThread.Start(args);
             SThread.Start(args);
             TThread.Start(args);
 
-            while (args.firstQueue.Count != 0)
+            if (FThread.IsAlive)
             {
-                if (!FThread.IsAlive)
-                {
-                    FThread = new Thread(new ParameterizedThreadStart(Conveyor));
-                    FThread.Name = "Поток 1";
-                    FThread.Start(args);
-                }
-
-                if (!SThread.IsAlive)
-                {
-                    SThread = new Thread(new ParameterizedThreadStart(Conveyor));
-                    SThread.Name = "Поток 2";
-                    SThread.Start(args);
-                }
-
-                if (!TThread.IsAlive)
-                {
-                    TThread = new Thread(new ParameterizedThreadStart(Conveyor));
-                    TThread.Name = "Поток 3";
-                    TThread.Start(args);
-                }
+                FThread.Join();
             }
-
-            FThread.Join();
-            SThread.Join();
-            TThread.Join();
+            if (SThread.IsAlive)
+            {
+                SThread.Join();
+            }
+            if (TThread.IsAlive)
+            {
+                TThread.Join();
+            }
 
             t2 = DateTime.Now.Ticks;
 
@@ -367,9 +354,9 @@ namespace Lab5
                 Environment.Exit(0);
             }
 
-            Console.WriteLine("\n\nМассивы по задачам: ");
+            //Console.WriteLine("\n\nМассивы по задачам: ");
             Queue<intPtr> queue = CreateQueue(count, len_);
-            Console.WriteLine("\n\n");
+            //Console.WriteLine("\n\n");
             MainTread(queue);
 
             PrintArray(time1in);
@@ -402,9 +389,10 @@ namespace Lab5
             t6 = new List<Int64>();
         }
     }
+
 }
 
 
 // len = [10, 25, 50, 500, 10000, 50000, 100000, 500000]
-// simple = [34783, 64132, 177235, 733111, 23997915, 138152405, 238140692, 1368964823] 
-// con = [566716, 589083, 908572, 1444050, 23651996, 137199030, 211956092, 1195390050]
+// simple = [80787, 126215, 224339, 1544327, 45514333, 238827518, 507921569, 1368964823] 
+// con = [195937, 541271, 662793, 868520, 12008429, 99503420, 125635838, 1195390050]
