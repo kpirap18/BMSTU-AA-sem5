@@ -1,0 +1,20 @@
+graph G
+{
+    edge[color="gray54",fontcolor="blue",fontsize=12, len=3];
+
+    a -- b [label="1"];
+    b -- c [label="1"];
+    a -- c [label="10"];
+    c -- d [label="1"];
+    a -- d [label="7"];
+    b -- d [label="2"];
+    d -- e [label="1"];
+    a -- e [label="5"];
+    b -- e [label="11"];
+    c -- e [label="18"];
+    e -- f [label="2"];
+    a -- f [label="15"];
+    b -- f [label="10"];
+    c -- f [label="2"];
+    d -- f [label="12"];
+}
