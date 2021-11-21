@@ -1,0 +1,34 @@
+graph G
+{
+    edge[color="gray54",fontcolor="blue",fontsize=12, len=3];
+    node[color="indigo",fontsize=14, shape="septagon"];
+
+    a -- b [label="111"];
+    b -- c [label="111"];
+    c -- d [label="111"];
+    d -- e [label="111"];
+    e -- f [label="111"];
+    a -- f [label="111"];
+    a -- c [label="111"];
+    a -- d [label="112"];
+    a -- e [label="111"];
+    b -- d [label="111"];
+    b -- e [label="111"];
+    b -- f [label="111"];
+    c -- e [label="112"];
+    c -- f [label="111"];
+    d -- f [label="111"];
+		g -- a [label="111"];
+		g -- b [label="111"];
+		g -- c [label="111"];
+		g -- d [label="111"];
+		g -- e [label="111"];
+		g -- f [label="112"];
+			h -- a [label="111"];
+			h -- b [label="111"];
+			h -- c [label="111"];
+			h -- d [label="111"];
+			h -- e [label="112"];
+			h -- f [label="111"];
+			h -- g [label="111"];
+}

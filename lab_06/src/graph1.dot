@@ -1,0 +1,34 @@
+graph G
+{
+    edge[color="gray54",fontcolor="blue",fontsize=12, len=3];
+    node[color="indigo",fontsize=14, shape="septagon"];
+
+    a -- b [label="3000"];
+    b -- c [label="3607"];
+    c -- d [label="3490"];
+    d -- e [label="3890"];
+    e -- f [label="3004"];
+    a -- f [label="3388"];
+    a -- c [label="4599"];
+    a -- d [label="7000"];
+    a -- e [label="3412"];
+    b -- d [label="3000"];
+    b -- e [label="3432"];
+    b -- f [label="3033"];
+    c -- e [label="3988"];
+    c -- f [label="3834"];
+    d -- f [label="3444"];
+		g -- a [label="4454"];
+		g -- b [label="2339"];
+		g -- c [label="3121"];
+		g -- d [label="3245"];
+		g -- e [label="3322"];
+		g -- f [label="3238"];
+			h -- a [label="3498"];
+			h -- b [label="5621"];
+			h -- c [label="8731"];
+			h -- d [label="3341"];
+			h -- e [label="7863"];
+			h -- f [label="3468"];
+			h -- g [label="3218"];
+}
