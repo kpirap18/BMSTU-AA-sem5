@@ -33,14 +33,5 @@
 
 
 
-# for i in range(686):
-#     a = f.readline()
-#     a = a[:len(a) - 1]
-#     aa = a + ' \\\\\n'
-#     ff.write(aa)
-# f.close()
-# ff.close()
 
-print(f" select t.tourid, t.nametour \
-from packages.tours t join location1.cities c on t.cityid = c.cityid \
-join location1.countries c2 on c.countryid = c2.countryid")
+
